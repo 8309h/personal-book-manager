@@ -12,8 +12,8 @@ const generateToken = (userId) => {
 // Cookie options (reuse)
 const cookieOptions = {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax" 
+      secure: true,
+      sameSite: "none" 
 };
 
 // ================= SIGNUP =================
