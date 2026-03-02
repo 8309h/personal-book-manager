@@ -74,20 +74,6 @@ export default function BookCard({ book, refresh }) {
 
                               <div style={styles.actions}>
                                     <button
-                                          style={styles.grayBtn}
-                                          onClick={() => setEditing(true)}
-                                    >
-                                          Edit
-                                    </button>
-
-                                    <button
-                                          style={styles.deleteBtn}
-                                          onClick={deleteBook}
-                                    >
-                                          Delete
-                                    </button>
-
-                                    <button
                                           style={styles.primaryBtn}
                                           onClick={() => changeStatus("want_to_read")}
                                     >
@@ -107,6 +93,21 @@ export default function BookCard({ book, refresh }) {
                                     >
                                           Completed
                                     </button>
+                                    <button
+                                          style={styles.grayBtn}
+                                          onClick={() => setEditing(true)}
+                                    >
+                                          Edit
+                                    </button>
+
+                                    <button
+                                          style={styles.deleteBtn}
+                                          onClick={deleteBook}
+                                    >
+                                          Delete
+                                    </button>
+
+
                               </div>
                         </>
                   )}
