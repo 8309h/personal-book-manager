@@ -3,6 +3,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
 const authRoutes = require("./routes/auth.routes");
+const bookRoutes = require("./routes/book.routes");
 
 const app = express();
 
@@ -10,14 +11,16 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
+// Proper CORS setup
 app.use(
       cors({
-            origin: "http://localhost:3000",
+            origin: "http://localhost:3000", // frontend URL
             credentials: true
       })
 );
 
-// // Routes
+// Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/books", bookRoutes);
 
 module.exports = app;
