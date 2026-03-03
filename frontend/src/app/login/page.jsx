@@ -95,6 +95,13 @@ export default function LoginPage() {
                   </form>
 
                   {error && <p style={styles.error}>{error}</p>}
+                  <p style={{ marginTop: "20px" }}>
+                        Don't have an account?{" "}
+                        <a href="/register" style={{ color: "#0070f3", textDecoration: "none" }}>
+                              Register here
+                        </a>
+                  </p>
+
             </div>
       );
 }
